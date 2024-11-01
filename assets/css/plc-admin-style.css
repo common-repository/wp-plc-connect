@@ -1,0 +1,614 @@
+/* Admin Panel Main Frame */
+div.plc-admin {
+    margin: 0 0 -65px -20px;
+}
+
+/* Admin Page Container */
+div.plc-admin-page-container {
+    width:100%; display: inline-block; float: left;
+}
+
+/* Alert Container */
+.plc-admin-alert-container {
+    float:left; width:30%; padding:40px 0 40px 0;
+}
+
+/* Admin Header Column */
+.plc-settings-header-col {
+    width: 33%;
+}
+
+/* Admin Header Column - First */
+.header-col-first {
+    text-align: left;
+}
+
+/* Admin Header Column - Second */
+.header-col-second {
+    text-align: center;
+}
+.header-col-second img {
+    max-height:42px;
+}
+
+/* Admin Header Column - Third */
+.header-col-third {
+    text-align: right;
+}
+
+/* Font Awesome Icon Selector */
+select.plc-icon-selector {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+/* Admin Panel Settings Wrapper */
+div.plc-settings-wrapper {
+    margin:0; padding:0; display: block !important;
+}
+
+/* Admin Panel Settings Header */
+div.plc-settings-header {
+    padding: 20px 50px 80px; background:#13b4df;
+}
+
+/* Admin Panel Settings Header Content */
+div.plc-settings-header-main {
+    padding-top:12px; position: relative; display: flex; justify-content: space-between;
+}
+
+/* Admin Panel Settings Header Title */
+div.plc-settings-header-main-title {
+    height: 52px;line-height: 52px;font-size: 17px;color:#fff;margin: 0;
+}
+
+/* Admin Panel Main Content Section */
+main.plc-admin-main {
+    position: relative;
+    background:#fff;
+    border-radius: 5px;
+    margin: -60px 50px 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,.11);
+    min-height: 600px;
+    display: inline-block;
+    width:95%;
+}
+
+/* Admin Panel Header Menu Container */
+div.plc-admin-menu-container {
+    width:100%; padding-left:40px; display: inline-block; float:left; border-bottom:1px solid lightgray;
+}
+
+/* Admin Menu */
+nav.plc-admin-menu {
+    width:70%; float:left;
+}
+
+/* Admin Menu List */
+ul.plc-admin-menu-list {
+    margin: 20px 0; list-style-type: none; padding: 0;
+}
+
+/* Admin Menu List Item Container */
+li.plc-admin-menu-list-item {
+    margin: 0 30px 0 0;
+    position: relative;
+    float: left;
+}
+
+/* Admin Menu List Item (Navi) */
+li.plc-admin-menu-list-item a {
+    display: block;
+    position: relative;
+    color: #80a5bb;
+    line-height: 1;
+    padding: 24px 2px 21px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #444f5b;
+    text-decoration: none;
+}
+
+/* The switch - the box around the slider */
+.plc-settings-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.plc-settings-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.plc-settings-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.plc-settings-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .plc-settings-slider {
+    background-color: #2196F3;
+}
+
+input:focus + .plc-settings-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .plc-settings-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+
+.plc-alert {
+    padding: 8px 35px 8px 14px;
+    margin-bottom: 18px;
+    color: #c09853;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width:250px;
+    position: absolute;
+}
+.plc-alert-heading {
+    color: inherit;
+}
+.plc-alert .close {
+    position: relative;
+    top: -2px;
+    right: 0;
+    line-height: 18px;
+}
+
+.plc-alert-success {
+    color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+
+.plc-alert-danger {
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #eed3d7;
+}
+
+.plc-alert-info {
+    color: #3a87ad;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.plc-admin-page {
+    display: none;
+    padding: 10px 40px 40px 40px;
+}
+
+.plc-admin-settings-field {
+    width:100%;
+    padding:4px 0 4px 0;
+}
+
+/* The slider itself */
+.plc-settings-range-slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.plc-settings-range-slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.plc-settings-range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.plc-settings-range-slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.plc-admin-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.plc-admin-btn:focus,
+.plc-admin-btn:active:focus,
+.plc-admin-btn.active:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.plc-admin-btn:hover,
+.plc-admin-btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+.plc-admin-btn:active,
+.plc-admin-btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.plc-admin-btn.disabled,
+.plc-admin-btn[disabled],
+fieldset[disabled] .plc-admin-btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+.plc-admin-btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.plc-admin-btn-default:hover,
+.plc-admin-btn-default:focus,
+.plc-admin-btn-default:active,
+.plc-admin-btn-default.active,
+.open .dropdown-toggle.plc-admin-btn-default {
+    color: #333;
+    background-color: #ebebeb;
+    border-color: #adadad;
+}
+.plc-admin-btn-default:active,
+.plc-admin-btn-default.active,
+.open .dropdown-toggle.plc-admin-btn-default {
+    background-image: none;
+}
+.plc-admin-btn-default.disabled,
+.plc-admin-btn-default[disabled],
+fieldset[disabled] .plc-admin-btn-default,
+.plc-admin-btn-default.disabled:hover,
+.plc-admin-btn-default[disabled]:hover,
+fieldset[disabled] .plc-admin-btn-default:hover,
+.plc-admin-btn-default.disabled:focus,
+.plc-admin-btn-default[disabled]:focus,
+fieldset[disabled] .plc-admin-btn-default:focus,
+.plc-admin-btn-default.disabled:active,
+.plc-admin-btn-default[disabled]:active,
+fieldset[disabled] .plc-admin-btn-default:active,
+.plc-admin-btn-default.disabled.active,
+.plc-admin-btn-default[disabled].active,
+fieldset[disabled] .plc-admin-btn-default.active {
+    background-color: #fff;
+    border-color: #ccc;
+}
+.plc-admin-btn-default .badge {
+    color: #fff;
+    background-color: #333;
+}
+.plc-admin-btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.plc-admin-btn-primary:hover,
+.plc-admin-btn-primary:focus,
+.plc-admin-btn-primary:active,
+.plc-admin-btn-primary.active,
+.open .dropdown-toggle.plc-admin-btn-primary {
+    color: #fff;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+.plc-admin-btn-primary:active,
+.plc-admin-btn-primary.active,
+.open .dropdown-toggle.plc-admin-btn-primary {
+    background-image: none;
+}
+.plc-admin-btn-primary.disabled,
+.plc-admin-btn-primary[disabled],
+fieldset[disabled] .plc-admin-btn-primary,
+.plc-admin-btn-primary.disabled:hover,
+.plc-admin-btn-primary[disabled]:hover,
+fieldset[disabled] .plc-admin-btn-primary:hover,
+.plc-admin-btn-primary.disabled:focus,
+.plc-admin-btn-primary[disabled]:focus,
+fieldset[disabled] .plc-admin-btn-primary:focus,
+.plc-admin-btn-primary.disabled:active,
+.plc-admin-btn-primary[disabled]:active,
+fieldset[disabled] .plc-admin-btn-primary:active,
+.plc-admin-btn-primary.disabled.active,
+.plc-admin-btn-primary[disabled].active,
+fieldset[disabled] .plc-admin-btn-primary.active {
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.plc-admin-btn-primary .badge {
+    color: #428bca;
+    background-color: #fff;
+}
+.plc-admin-btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.plc-admin-btn-success:hover,
+.plc-admin-btn-success:focus,
+.plc-admin-btn-success:active,
+.plc-admin-btn-success.active,
+.open .dropdown-toggle.plc-admin-btn-success {
+    color: #fff;
+    background-color: #47a447;
+    border-color: #398439;
+}
+.plc-admin-btn-success:active,
+.plc-admin-btn-success.active,
+.open .dropdown-toggle.plc-admin-btn-success {
+    background-image: none;
+}
+.plc-admin-btn-success.disabled,
+.plc-admin-btn-success[disabled],
+fieldset[disabled] .plc-admin-btn-success,
+.plc-admin-btn-success.disabled:hover,
+.plc-admin-btn-success[disabled]:hover,
+fieldset[disabled] .plc-admin-btn-success:hover,
+.plc-admin-btn-success.disabled:focus,
+.plc-admin-btn-success[disabled]:focus,
+fieldset[disabled] .plc-admin-btn-success:focus,
+.plc-admin-btn-success.disabled:active,
+.plc-admin-btn-success[disabled]:active,
+fieldset[disabled] .plc-admin-btn-success:active,
+.plc-admin-btn-success.disabled.active,
+.plc-admin-btn-success[disabled].active,
+fieldset[disabled] .plc-admin-btn-success.active {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.plc-admin-btn-success .badge {
+    color: #5cb85c;
+    background-color: #fff;
+}
+.plc-admin-btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.plc-admin-btn-info:hover,
+.plc-admin-btn-info:focus,
+.plc-admin-btn-info:active,
+.plc-admin-btn-info.active,
+.open .dropdown-toggle.plc-admin-btn-info {
+    color: #fff;
+    background-color: #39b3d7;
+    border-color: #269abc;
+}
+.plc-admin-btn-info:active,
+.plc-admin-btn-info.active,
+.open .dropdown-toggle.plc-admin-btn-info {
+    background-image: none;
+}
+.plc-admin-btn-info.disabled,
+.plc-admin-btn-info[disabled],
+fieldset[disabled] .plc-admin-btn-info,
+.plc-admin-btn-info.disabled:hover,
+.plc-admin-btn-info[disabled]:hover,
+fieldset[disabled] .plc-admin-btn-info:hover,
+.plc-admin-btn-info.disabled:focus,
+.plc-admin-btn-info[disabled]:focus,
+fieldset[disabled] .plc-admin-btn-info:focus,
+.plc-admin-btn-info.disabled:active,
+.plc-admin-btn-info[disabled]:active,
+fieldset[disabled] .plc-admin-btn-info:active,
+.plc-admin-btn-info.disabled.active,
+.plc-admin-btn-info[disabled].active,
+fieldset[disabled] .plc-admin-btn-info.active {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.plc-admin-btn-info .badge {
+    color: #5bc0de;
+    background-color: #fff;
+}
+.plc-admin-btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+.plc-admin-btn-warning:hover,
+.plc-admin-btn-warning:focus,
+.plc-admin-btn-warning:active,
+.plc-admin-btn-warning.active,
+.open .dropdown-toggle.plc-admin-btn-warning {
+    color: #fff;
+    background-color: #ed9c28;
+    border-color: #d58512;
+}
+.plc-admin-btn-warning:active,
+.plc-admin-btn-warning.active,
+.open .dropdown-toggle.plc-admin-btn-warning {
+    background-image: none;
+}
+.plc-admin-btn-warning.disabled,
+.plc-admin-btn-warning[disabled],
+fieldset[disabled] .plc-admin-btn-warning,
+.plc-admin-btn-warning.disabled:hover,
+.plc-admin-btn-warning[disabled]:hover,
+fieldset[disabled] .plc-admin-btn-warning:hover,
+.plc-admin-btn-warning.disabled:focus,
+.plc-admin-btn-warning[disabled]:focus,
+fieldset[disabled] .plc-admin-btn-warning:focus,
+.plc-admin-btn-warning.disabled:active,
+.plc-admin-btn-warning[disabled]:active,
+fieldset[disabled] .plc-admin-btn-warning:active,
+.plc-admin-btn-warning.disabled.active,
+.plc-admin-btn-warning[disabled].active,
+fieldset[disabled] .plc-admin-btn-warning.active {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+.plc-admin-btn-warning .badge {
+    color: #f0ad4e;
+    background-color: #fff;
+}
+.plc-admin-btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.plc-admin-btn-danger:hover,
+.plc-admin-btn-danger:focus,
+.plc-admin-btn-danger:active,
+.plc-admin-btn-danger.active,
+.open .dropdown-toggle.plc-admin-btn-danger {
+    color: #fff;
+    background-color: #d2322d;
+    border-color: #ac2925;
+}
+.plc-admin-btn-danger:active,
+.plc-admin-btn-danger.active,
+.open .dropdown-toggle.plc-admin-btn-danger {
+    background-image: none;
+}
+.plc-admin-btn-danger.disabled,
+.plc-admin-btn-danger[disabled],
+fieldset[disabled] .plc-admin-btn-danger,
+.plc-admin-btn-danger.disabled:hover,
+.plc-admin-btn-danger[disabled]:hover,
+fieldset[disabled] .plc-admin-btn-danger:hover,
+.plc-admin-btn-danger.disabled:focus,
+.plc-admin-btn-danger[disabled]:focus,
+fieldset[disabled] .plc-admin-btn-danger:focus,
+.plc-admin-btn-danger.disabled:active,
+.plc-admin-btn-danger[disabled]:active,
+fieldset[disabled] .plc-admin-btn-danger:active,
+.plc-admin-btn-danger.disabled.active,
+.plc-admin-btn-danger[disabled].active,
+fieldset[disabled] .plc-admin-btn-danger.active {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.plc-admin-btn-danger .badge {
+    color: #d9534f;
+    background-color: #fff;
+}
+.plc-admin-btn-link {
+    font-weight: normal;
+    color: #428bca;
+    cursor: pointer;
+    border-radius: 0;
+}
+.plc-admin-btn-link,
+.plc-admin-btn-link:active,
+.plc-admin-btn-link[disabled],
+fieldset[disabled] .plc-admin-btn-link {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.plc-admin-btn-link,
+.plc-admin-btn-link:hover,
+.plc-admin-btn-link:focus,
+.plc-admin-btn-link:active {
+    border-color: transparent;
+}
+.plc-admin-btn-link:hover,
+.plc-admin-btn-link:focus {
+    color: #2a6496;
+    text-decoration: underline;
+    background-color: transparent;
+}
+.plc-admin-btn-link[disabled]:hover,
+fieldset[disabled] .plc-admin-btn-link:hover,
+.plc-admin-btn-link[disabled]:focus,
+fieldset[disabled] .plc-admin-btn-link:focus {
+    color: #999;
+    text-decoration: none;
+}
+.plc-admin-btn-lg,
+.plc-admin-btn-group-lg > .plc-admin-btn {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+}
+.plc-admin-btn-sm,
+.plc-admin-btn-group-sm > .plc-admin-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.plc-admin-btn-xs,
+.plc-admin-btn-group-xs > .plc-admin-btn {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+.plc-admin-btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+.plc-admin-btn-block + .plc-admin-btn-block {
+    margin-top: 5px;
+}
+input[type="submit"].plc-admin-btn-block,
+input[type="reset"].plc-admin-btn-block,
+input[type="button"].plc-admin-btn-block {
+    width: 100%;
+}
